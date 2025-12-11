@@ -1049,6 +1049,91 @@
 
         </section>
 
+
+
+      <!-- SLIDE 10: CONCLUSIONS -->
+        <section data-transition="fade"
+                style="position:absolute; top:0; left:0; width:100%; height:100%;">
+
+        <div style="position:absolute; top:20px; left:20px;">
+            <h2>Conclusions</h2>
+            <h3 style="font-size:0.9em; color:var(--muted); margin-top:4px;">
+            Key takeaways from the 1D boundary-layer experiments
+            </h3>
+        </div>
+
+        <div class="card"
+            style="position:absolute; top:180px; left:20px; width:600px;
+                    padding:1rem 1.2rem; font-size:0.95em;">
+
+            <ul style="margin-top:6px; line-height:1.45;">
+            <li>Model reproduces the main mechanisms of the morning CBL transition.</li>
+            <li>Sensitivity tests confirm theory: <strong>stability dominates</strong>, wind plays a secondary role.</li>
+            <li>Remaining biases indicate opportunities for improving turbulence and surface-flux parameterisations.</li>
+            </ul>
+        </div>
+
+        <div style="position:absolute; top:180px; right:-200px;">
+            <svg width="1000" height="1000" viewBox="0 0 800 800"
+                xmlns="http://www.w3.org/2000/svg"
+                style="opacity:0.95; filter:drop-shadow(0 0 12px rgba(255,255,255,0.12));">
+
+             <g transform="scale(1.3)"></g>
+
+            <style>
+                .node {
+                fill: rgba(255,255,255,0.05);
+                stroke: rgba(255,255,255,0.25);
+                stroke-width: 3;
+                rx: 12;
+                }
+                .text {
+                fill: #F1F3F5;
+                font-size: 22px;
+                font-family: Inter, sans-serif;
+                font-weight: 600;
+                text-anchor: middle;
+                }
+                .arrow {
+                stroke: #FFBE0B;
+                stroke-width: 6;
+                marker-end: url(#arrowhead);
+                }
+            </style>
+
+            <defs>
+                <marker id="arrowhead" markerWidth="8" markerHeight="8"
+                        refX="4" refY="4" orient="auto">
+                <polygon points="0 0, 8 4, 0 8" fill="#FFBE0B"/>
+                </marker>
+            </defs>
+
+            <!-- Triangle Nodes -->
+            <rect x="230" y="40" width="140" height="60" class="node"/>
+            <text x="300" y="80" class="text">Stability</text>
+
+            <rect x="40" y="400" width="160" height="60" class="node"/>
+            <text x="120" y="440" class="text">Wind</text>
+
+            <rect x="400" y="400" width="160" height="60" class="node"/>
+            <text x="480" y="440" class="text">Surface Flux</text>
+
+            <!-- Arrows -->
+            <line x1="300" y1="100" x2="120" y2="400" class="arrow"/>
+            <line x1="300" y1="100" x2="480" y2="400" class="arrow"/>
+            <line x1="120" y1="460" x2="480" y2="460"
+                    stroke="rgba(255,255,255,0.18)"
+                    stroke-width="4"/>
+
+            <!-- Emphasise Dominance -->
+            <text x="300" y="300" class="text"
+                    style="font-size:22px; fill:#ffef0b;">Dominant Control</text>
+
+            </svg>
+        </div>
+
+        </section>
+
       <!-- SLIDE 9: LIMITATIONS -->
         <section data-transition="fade"
                 style="position:absolute; top:0; left:0; width:100%; height:100%;">
@@ -1143,89 +1228,6 @@
             <li><strong>No moisture, radiation, or cloud feedbacks</strong> → missing key ABL processes.</li>
             <li><strong>Inversion sharpness</strong> depends on vertical resolution and diffusion scheme.</li>
             </ul>
-        </div>
-
-        </section>
-
-      <!-- SLIDE 10: CONCLUSIONS -->
-        <section data-transition="fade"
-                style="position:absolute; top:0; left:0; width:100%; height:100%;">
-
-        <div style="position:absolute; top:20px; left:20px;">
-            <h2>Conclusions</h2>
-            <h3 style="font-size:0.9em; color:var(--muted); margin-top:4px;">
-            Key takeaways from the 1D boundary-layer experiments
-            </h3>
-        </div>
-
-        <div class="card"
-            style="position:absolute; top:180px; left:20px; width:600px;
-                    padding:1rem 1.2rem; font-size:0.95em;">
-
-            <ul style="margin-top:6px; line-height:1.45;">
-            <li>Model reproduces the main mechanisms of the morning CBL transition.</li>
-            <li>Sensitivity tests confirm theory: <strong>stability dominates</strong>, wind plays a secondary role.</li>
-            <li>Remaining biases indicate opportunities for improving turbulence and surface-flux parameterisations.</li>
-            </ul>
-        </div>
-
-        <div style="position:absolute; top:180px; right:-200px;">
-            <svg width="1000" height="1000" viewBox="0 0 800 800"
-                xmlns="http://www.w3.org/2000/svg"
-                style="opacity:0.95; filter:drop-shadow(0 0 12px rgba(255,255,255,0.12));">
-
-             <g transform="scale(1.3)"></g>
-
-            <style>
-                .node {
-                fill: rgba(255,255,255,0.05);
-                stroke: rgba(255,255,255,0.25);
-                stroke-width: 3;
-                rx: 12;
-                }
-                .text {
-                fill: #F1F3F5;
-                font-size: 22px;
-                font-family: Inter, sans-serif;
-                font-weight: 600;
-                text-anchor: middle;
-                }
-                .arrow {
-                stroke: #FFBE0B;
-                stroke-width: 6;
-                marker-end: url(#arrowhead);
-                }
-            </style>
-
-            <defs>
-                <marker id="arrowhead" markerWidth="8" markerHeight="8"
-                        refX="4" refY="4" orient="auto">
-                <polygon points="0 0, 8 4, 0 8" fill="#FFBE0B"/>
-                </marker>
-            </defs>
-
-            <!-- Triangle Nodes -->
-            <rect x="230" y="40" width="140" height="60" class="node"/>
-            <text x="300" y="80" class="text">Stability</text>
-
-            <rect x="40" y="400" width="160" height="60" class="node"/>
-            <text x="120" y="440" class="text">Wind</text>
-
-            <rect x="400" y="400" width="160" height="60" class="node"/>
-            <text x="480" y="440" class="text">Surface Flux</text>
-
-            <!-- Arrows -->
-            <line x1="300" y1="100" x2="120" y2="400" class="arrow"/>
-            <line x1="300" y1="100" x2="480" y2="400" class="arrow"/>
-            <line x1="120" y1="460" x2="480" y2="460"
-                    stroke="rgba(255,255,255,0.18)"
-                    stroke-width="4"/>
-
-            <!-- Emphasise Dominance -->
-            <text x="300" y="300" class="text"
-                    style="font-size:22px; fill:#ffef0b;">Dominant Control</text>
-
-            </svg>
         </div>
 
         </section>
